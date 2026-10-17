@@ -68,7 +68,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-3 font-body text-sm">
                 <li>
                   <a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/company/mar-tech-lab"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"
