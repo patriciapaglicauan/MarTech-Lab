@@ -65,7 +65,7 @@ export default function AboutMini() {
               href="/about"
               className="btn-ghost-white inline-block px-6 py-3 text-sm"
             >
-              Read the full story →
+              Read the full story
             </Link>
           </AnimateSection>
         </div>

@@ -202,7 +202,7 @@ export default function Solution() {
                   rel="noopener noreferrer"
                   className="btn-crimson px-5 py-3 text-sm"
                 >
-                  Get this for your business →
+                  Get this for your business
                 </a>
               </div>
             </div>

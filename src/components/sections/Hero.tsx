@@ -60,7 +60,7 @@ export default function Hero() {
             Book a Free Audit
           </RingButton>
           <a href="#services" className="btn-ghost px-6 py-4 text-sm">
-            See How It Works ↓
+            See How It Works
           </a>
         </motion.div>
 

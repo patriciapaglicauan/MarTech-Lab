@@ -40,7 +40,7 @@ export default function Results() {
               href="/results"
               className="font-display text-sm font-700 text-crimson hover:underline underline-offset-4 whitespace-nowrap"
             >
-              See all case studies →
+              See all case studies
             </Link>
           </div>
         </AnimateSection>

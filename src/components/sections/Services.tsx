@@ -131,7 +131,7 @@ function ServiceCard({ service, delay }: { service: typeof services[0]; delay: n
                 : 'border border-white/15 text-white hover:border-white/30 hover:bg-white/5'
             }`}
           >
-            {service.highlighted ? 'Get Started →' : 'Learn More →'}
+            {service.highlighted ? 'Get Started' : 'Learn More'}
           </Link>
 
           {/* Divider */}
@@ -176,7 +176,7 @@ export default function Services() {
 
         <AnimateSection className="mt-10 text-center">
           <Link href="/services" className="font-display text-sm font-700 text-crimson hover:underline underline-offset-4">
-            View full scope and pricing details →
+            View full scope and pricing details
           </Link>
         </AnimateSection>
       </div>
