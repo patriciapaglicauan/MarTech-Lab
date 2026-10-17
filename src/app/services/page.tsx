@@ -110,7 +110,8 @@ function ServiceCard({ svc, i }: { svc: typeof services[0]; i: number }) {
   }
 
   return (
-    <AnimateSection id={svc.id} delay={i * 0.08}>
+    <div id={svc.id}>
+    <AnimateSection delay={i * 0.08}>
       <div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -232,6 +233,7 @@ function ServiceCard({ svc, i }: { svc: typeof services[0]; i: number }) {
         </div>
       </div>
     </AnimateSection>
+    </div>
   )
 }
 
