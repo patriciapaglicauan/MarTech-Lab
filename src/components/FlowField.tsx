@@ -11,11 +11,11 @@ export default function FlowField({ dark = true, className = '', style }: FlowFi
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    const canvas = canvasRef.current
+    const canvas = canvasRef.current as HTMLCanvasElement
     if (!canvas) return
-    const ctx = canvas.getContext('2d', { alpha: true })
+    const ctx = canvas.getContext('2d', { alpha: true }) as CanvasRenderingContext2D
     if (!ctx) return
-    const parent = canvas.parentElement
+    const parent = canvas.parentElement as HTMLElement
     if (!parent) return
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
