@@ -44,10 +44,10 @@ export default function Nav() {
             Services
           </Link>
           <Link
-            href="/results"
+            href="/contact"
             className="font-body text-sm font-500 text-charcoal/70 hover:text-charcoal transition-colors"
           >
-            Results
+            Contact
           </Link>
         </div>
 
@@ -98,11 +98,11 @@ export default function Nav() {
             Services
           </Link>
           <Link
-            href="/results"
+            href="/contact"
             className="font-display text-lg font-700 text-charcoal"
             onClick={() => setMobileOpen(false)}
           >
-            Results
+            Contact
           </Link>
           <RingButton
             href="https://calendar.app.google/3z7T9gLH8mHjNugPA"
