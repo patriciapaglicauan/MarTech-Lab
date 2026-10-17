@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+/* ─── Tailwind v4 theme ─────────────────────────────────────────── */
+@theme {
+  --font-display: var(--font-league-spartan), 'League Spartan', sans-serif;
+  --font-body:    var(--font-poppins), 'Poppins', sans-serif;
+  --font-sans:    var(--font-poppins), 'Poppins', sans-serif;
+
+  --color-crimson:          #C03028;
+  --color-crimson-dark:     #9A2420;
+  --color-stone:            #F2F0EB;
+  --color-stone-dark:       #EFEDE8;
+  --color-charcoal:         #1A1A1E;
+  --color-charcoal-light:   #1E1E24;
+  --color-charcoal-dark:    #0F0F12;
+  --color-charcoal-deep:    #161619;
+  --color-signal-green:     #2D8A4E;
+  --color-violet:           #6B3FA0;
+
+  --font-weight-900: 900;
+  --font-weight-800: 800;
+  --font-weight-700: 700;
+}
+
+/* ─── CSS custom properties (used in plain CSS) ─────────────────── */
+:root {
+  --crimson: #C03028;
+  --crimson-dark: #9A2420;
+  --violet: #6B3FA0;
+  --stone: #F2F0EB;
+  --stone-dark: #EFEDE8;
+  --charcoal: #1A1A1E;
+  --charcoal-light: #1E1E24;
+  --charcoal-deep: #161619;
+  --charcoal-black: #0F0F12;
+  --signal-green: #2D8A4E;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--stone);
+  color: var(--charcoal);
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-league-spartan), 'League Spartan', sans-serif;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+/* Ensure font-display utility always maps to League Spartan */
+.font-display {
+  font-family: var(--font-league-spartan), 'League Spartan', sans-serif;
+}
+
+/* ─── Glassmorphism utilities ────────────────────────────────────── */
+
+/* For dark backgrounds */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* For light/stone backgrounds */
+.glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Legacy alias */
+.glass-light {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ─── Buttons ────────────────────────────────────────────────────── */
+.btn-crimson {
+  background: var(--crimson);
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: var(--font-league-spartan), 'League Spartan', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: background 0.18s ease, transform 0.12s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.btn-crimson:hover  { background: var(--crimson-dark); transform: translateY(-1px); }
+.btn-crimson:active { transform: translateY(0); }
+
+.btn-ghost {
+  color: var(--charcoal);
+  border: 1.5px solid rgba(26,26,30,0.3);
+  border-radius: 8px;
+  font-family: var(--font-league-spartan), 'League Spartan', sans-serif;
+  font-weight: 600;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-ghost:hover { background: var(--charcoal); color: #fff; border-color: var(--charcoal); }
+
+.btn-ghost-white {
+  color: rgba(255,255,255,0.75);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 8px;
+  font-family: var(--font-league-spartan), 'League Spartan', sans-serif;
+  font-weight: 600;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-ghost-white:hover { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.5); }
+
+/* ─── Typography utilities ───────────────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-league-spartan), 'League Spartan', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--crimson);
+}
+
+.text-highlight { color: var(--crimson); }
+
+/* ─── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: var(--charcoal); }
+::-webkit-scrollbar-thumb { background: var(--crimson); border-radius: 3px; }
+
+/* ─── Focus ──────────────────────────────────────────────────────── */
+:focus-visible        { outline: 2px solid var(--crimson); outline-offset: 3px; }
+:focus:not(:focus-visible) { outline: none; }
