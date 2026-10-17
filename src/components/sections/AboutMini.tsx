@@ -50,7 +50,7 @@ export default function AboutMini() {
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
-              {['PHG — Hospitality', 'Hosted Network — MSP', 'SolarWinds — B2B SaaS'].map((cred) => (
+              {['RevOps — Hospitality', 'MarOps — B2B SaaS', 'CRM Ops — Healthcare'].map((cred) => (
                 <span
                   key={cred}
                   className="font-display text-xs font-700 px-3 py-1.5 rounded"

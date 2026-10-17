@@ -30,7 +30,7 @@ const industries = [
 const leftFeatures = [
   {
     label: 'Built inside real operations',
-    body: 'Active RevOps and Marketing Ops at PHG, SolarWinds, Hosted Network — simultaneously.',
+    body: 'Active Revenue Operations and Marketing Ops across hospitality, B2B SaaS, and healthcare — simultaneously.',
     iconPath: 'M9 17H7a3 3 0 0 1 0-6h2M15 11h2a3 3 0 0 1 0 6h-2M12 8v10M12 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',
   },
   {

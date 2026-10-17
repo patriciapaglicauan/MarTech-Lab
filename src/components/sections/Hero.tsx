@@ -15,7 +15,7 @@ const fadeUp = {
 const trustSignals = [
   'HubSpot Certified',
   'Active across 3 industries',
-  'PHG · SolarWinds · Hosted Network',
+  'Hospitality · SaaS · Healthcare',
   'No lock-in contracts',
 ]
 
