@@ -21,7 +21,7 @@ const trustSignals = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100svh] flex flex-col items-center justify-center bg-[#F2F0EB] overflow-hidden pt-16">
+    <section className="relative min-h-[100svh] flex flex-col items-center justify-center bg-[#F2F0EB] overflow-hidden pt-36">
       {/* Flow field background */}
       <FlowField dark={false} style={{ opacity: 0.85 }} />
 
@@ -33,13 +33,14 @@ export default function Hero() {
 
         <motion.h1
           custom={0.1} variants={fadeUp} initial="hidden" animate="visible"
-          className="font-display font-900 text-charcoal leading-[1.03] tracking-tight mb-6"
+          className="font-display font-900 text-charcoal leading-[1.03] tracking-tight mb-3"
           style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
         >
           <span style={{ color: '#C03028' }}>AI Automation Services</span>
-          <br />for Restaurants, Fitness
-          <br />Studios &amp; Gyms, Clinics
+          <br />
+          <span style={{ fontSize: 'clamp(1.6rem, 3.2vw, 2.8rem)' }}>for Restaurants, Fitness Studios &amp; Gyms, Clinics</span>
         </motion.h1>
+
 
         <motion.p
           custom={0.2} variants={fadeUp} initial="hidden" animate="visible"

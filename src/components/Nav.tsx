@@ -23,7 +23,7 @@ export default function Nav() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-16' : 'h-32'}`}>
         <Link href="/" className="flex-shrink-0" aria-label="MarTech Lab home">
           <Image
             src="/logos/logo-light.svg"
@@ -31,7 +31,7 @@ export default function Nav() {
             width={190}
             height={120}
             priority
-            className="h-14 w-auto"
+            className={`w-auto transition-all duration-300 ${scrolled ? 'h-14' : 'h-28'}`}
           />
         </Link>
 
