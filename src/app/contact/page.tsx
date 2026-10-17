@@ -23,9 +23,20 @@ function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setState('sending')
-    // Placeholder — wire up to your form handler (Formspree, Resend, etc.)
-    await new Promise(r => setTimeout(r, 1000))
-    setState('sent')
+    try {
+      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setState('sent')
+      } else {
+        setState('error')
+      }
+    } catch {
+      setState('error')
+    }
   }
 
   const inputClass =
@@ -127,6 +138,11 @@ function ContactForm() {
         {state === 'sending' ? 'Sending…' : 'Send message'}
       </button>
 
+      {state === 'error' && (
+        <p className="font-body text-xs text-center" style={{ color: '#C03028' }}>
+          Something went wrong — email us directly at martechlab.admin@gmail.com
+        </p>
+      )}
       <p className="font-body text-xs text-white/25 text-center">
         Response within 24 hours · No spam, ever
       </p>
@@ -291,15 +307,15 @@ export default function ContactPage() {
         <section className="bg-[#0F0F12] py-16">
           <div className="max-w-6xl mx-auto px-6">
             <AnimateSection>
-              <div className="grid sm:grid-cols-3 gap-6 text-center">
+              <div className="grid sm:grid-cols-3 gap-6 text-center items-stretch">
                 {[
                   { stat: '< 24h', label: 'Response time on all enquiries' },
                   { stat: '100%', label: 'Written scope before any payment' },
                   { stat: '0', label: 'Lock-in contracts — ever' },
                 ].map((item, i) => (
-                  <AnimateSection key={item.stat} delay={i * 0.1}>
+                  <AnimateSection key={item.stat} delay={i * 0.1} className="h-full">
                     <div
-                      className="rounded-2xl p-7"
+                      className="rounded-2xl p-7 h-full flex flex-col items-center justify-center"
                       style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}
                     >
                       <p
